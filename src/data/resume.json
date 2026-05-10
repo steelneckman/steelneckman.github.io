@@ -1,0 +1,197 @@
+{
+  "personal": {
+    "name": "Joel Stålnacke",
+    "phone": "+46 73 031 46 44",
+    "email": "joel.stalnacke@gmail.com",
+    "location": "Linköping, Tingsvägen 12",
+    "linkedin": "linkedin.com/in/joel-stålnacke-755265228",
+    "github": "github.com/steelneckman",
+    "portfolio": "steelneckman.github.io"
+  },
+  "summary": "Senior IT Architect and Cloud Platform Lead with 10+ years of experience. Specialized in cloud-native (Kubernetes, Azure), event-driven architecture (Kafka), observability (Grafana/Prometheus/Loki), DevOps, AI-integration, and full-stack development (C#/Java/Python etc.).",
+  "expertise": [
+    "Cloud-Native/SaaS",
+    "System Integration",
+    "Scalability/Reliability",
+    "Distributed Systems",
+    "API Platforms",
+    "Modernization",
+    "Kubernetes/Containers",
+    "Agile",
+    "DevOps/CI/CD",
+    "Security",
+    "Leadership",
+    "Event-Driven",
+    "Observability",
+    "AI/Agents",
+    "Full-Stack"
+  ],
+  "highlights": [
+    "Platform with 200+ integrations",
+    "Java solution saving thousands SEK/day",
+    "Led teams of 20+ people"
+  ],
+  "experience": [
+    {
+      "id": "orthanc",
+      "company": "Tech Stack & Observability Hub",
+      "role": "Command Center",
+      "period": "Always Active",
+      "description": "The central tower of control. Mastering the art of platform engineering, tracing logs through the darkness, and orchestrating massive distributed systems.",
+      "metrics": [
+        "Full-Stack Vision",
+        "Distributed Tracing"
+      ],
+      "skills": [
+        "OTEL",
+        "Prometheus",
+        "Grafana",
+        "Loki",
+        "Terraform",
+        "GitOps"
+      ],
+      "theme": "orthanc"
+    },
+    {
+      "id": "gondor",
+      "company": "SAAB",
+      "role": "Platform Specialist",
+      "period": "Feb 2026 - Present",
+      "description": "Azure data hub, observability (App Insights/Grafana/CheckMK), MySQL, APIs.",
+      "metrics": [
+        "99.99% uptime target",
+        "API scaling"
+      ],
+      "skills": [
+        "Azure",
+        "Grafana",
+        "MySQL",
+        "APIs"
+      ],
+      "theme": "gondor"
+    },
+    {
+      "id": "mordor",
+      "company": "LKAB",
+      "role": "Solution Architect",
+      "period": "Jan 2024 - Feb 2026",
+      "description": "Cloud-native/K8s, Kafka events, BizTalk to Azure migration (200+ integrations), AI agents, API Management.",
+      "metrics": [
+        "200+ Integrations migrated",
+        "Event-driven scale"
+      ],
+      "skills": [
+        "K8s",
+        "Kafka",
+        "Azure",
+        "AI Agents",
+        "API Mgmt"
+      ],
+      "theme": "mordor"
+    },
+    {
+      "id": "rohan",
+      "company": "Försäkringskassan / CGI",
+      "role": "Full Stack Developer",
+      "period": "Oct 2022 - Jan 2024",
+      "description": "K8s/OpenShift, Quarkus migration, security UX, DevOps pipelines.",
+      "metrics": [
+        "20% faster startup"
+      ],
+      "skills": [
+        "OpenShift",
+        "Quarkus",
+        "Security",
+        "DevOps"
+      ],
+      "theme": "rohan"
+    },
+    {
+      "id": "rivendell",
+      "company": "Noas Ark",
+      "role": "Chairman",
+      "period": "2021 - 2022",
+      "description": "Communication, project planning, problem-solving. Led a team of 20+ people.",
+      "metrics": [
+        "Led 20+ team"
+      ],
+      "skills": [
+        "Leadership",
+        "Communication",
+        "Planning"
+      ],
+      "theme": "rivendell"
+    },
+    {
+      "id": "shire",
+      "company": "Linköping University (LiU)",
+      "role": "Full Stack Developer",
+      "period": "2016 - 2021",
+      "description": "PVD-simulations (Python/MongoDB), Agile, tech leadership (C++/Python).",
+      "metrics": [
+        "Simulate Molecule"
+      ],
+      "skills": [
+        "Python",
+        "MongoDB",
+        "Agile",
+        "C++"
+      ],
+      "theme": "shire"
+    }
+  ],
+  "education": [
+    "BSc Linköping University",
+    "Ongoing MSc Engineering Physics/EE"
+  ],
+  "tech_stack": {
+    "languages": [
+      "C",
+      "C#",
+      "Java",
+      "Kotlin",
+      "Go",
+      "Python"
+    ],
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB"
+    ],
+    "web": [
+      "JS",
+      "TS",
+      "Angular",
+      "React",
+      "Vue",
+      ".NET",
+      "Node",
+      "Quarkus"
+    ],
+    "cloud": [
+      "Azure",
+      "K8s",
+      "OpenShift",
+      "Podman"
+    ],
+    "messaging": [
+      "Kafka",
+      "RabbitMQ"
+    ],
+    "monitoring": [
+      "OTel",
+      "Prometheus",
+      "Grafana",
+      "Loki"
+    ],
+    "tools": [
+      "Git",
+      "JIRA",
+      "VSCode",
+      "Terraform"
+    ],
+    "certs": [
+      "GCP/Golang ongoing"
+    ]
+  }
+}

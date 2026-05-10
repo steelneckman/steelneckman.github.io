@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Not all who wander are lost - 404</title>
+  <script type="text/javascript">
+    // Simple redirect to the main page to handle routing issues on GH pages
+    // The query string is appended so that if we ever add a hash router, it can pick it up.
+    var path = window.location.pathname;
+    window.location.replace('/?redirect=' + encodeURIComponent(path));
+  </script>
+</head>
+<body style="background-color: #2a1f14; color: #d4a017; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; text-align: center;">
+  <div>
+    <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">404</h1>
+    <p>Not all those who wander are lost, but you seem to be.</p>
+    <p style="font-size: 0.8rem; color: #888;">Returning you to the path...</p>
+  </div>
+</body>
+</html>
