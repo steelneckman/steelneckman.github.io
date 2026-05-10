@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import ParticleBackground from './components/ParticleBackground';
+import Climber from './components/Climber';
 import resumeData from './data/resume.json';
 
 export default function App() {
@@ -42,35 +43,82 @@ export default function App() {
           </p>
         </header>
 
-        {/* MIDDLE: Main Grid */}
-        <main className="flex-1 w-full max-w-6xl mx-auto p-4 md:p-8 overflow-y-auto z-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-8">
-            {resumeData.experience.map((exp) => (
-              <div
-                key={exp.id}
-                onClick={() => handleCardClick(exp.id)}
-                className="bg-[#1e1e1e]/60 backdrop-blur-md border border-accent-gold/20 rounded-xl p-6 cursor-pointer hover:border-accent-gold/60 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-[0_0_15px_rgba(212,160,23,0.3)] group flex flex-col h-full"
-              >
-                <h3 className="text-xl font-bold text-gray-100 group-hover:text-accent-gold transition-colors">
-                  {exp.company}
-                </h3>
-                <p className="text-sm text-accent-gold/80 mb-4">{exp.role}</p>
+        {/* MIDDLE: Main Content */}
+        <main className="flex-1 w-full max-w-7xl mx-auto p-4 md:p-8 overflow-y-auto overflow-x-hidden z-10 flex flex-col">
+          
+          {/* STAIRCASE: Career Highlights */}
+          <section className="w-full relative pt-2 pb-8 mb-16 flex flex-col items-center">
+            <h2 id="career-timeline-heading" className="text-2xl font-bold text-accent-gold mb-8 uppercase tracking-wider text-center text-glow w-fit mx-auto">
+              Career Timeline
+            </h2>
+            
+            <div className="flex flex-col gap-6 w-full max-w-5xl mx-auto relative">
+              <Climber />
+              
+              {resumeData.experience.map((exp, index) => {
+                // Calculate stair step: Saab (index 0) gets highest margin, LiU (last) gets 0 margin.
+                const stairStep = (resumeData.experience.length - 1 - index) * 8;
+                
+                return (
+                  <div 
+                    key={exp.id}
+                    style={{ '--stair-margin': `${stairStep}%` }}
+                    onClick={() => handleCardClick(exp.id)}
+                    className="career-step bg-[#1e1e1e]/70 backdrop-blur-md border-l-4 border-b border-r border-t border-accent-gold/20 border-l-accent-gold rounded-r-xl p-6 cursor-pointer hover:bg-[#2a2a2a]/90 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,160,23,0.3)] transition-all shadow-lg w-full md:w-[65%] ml-0 md:ml-[var(--stair-margin)] relative group"
+                  >
+                    {/* Visual Connection Line (Optional, for the stairs effect) */}
+                    {index < resumeData.experience.length - 1 && (
+                      <div className="hidden md:block absolute -bottom-6 left-0 w-full h-6 border-l-4 border-accent-gold/30 opacity-50"></div>
+                    )}
 
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {exp.skills.slice(0, 3).map(skill => (
-                    <span key={skill} className="text-xs bg-black/50 px-2 py-1 rounded border border-gray-700">
-                      {skill}
-                    </span>
-                  ))}
-                  {exp.skills.length > 3 && (
-                    <span className="text-xs bg-black/50 px-2 py-1 rounded border border-gray-700">
-                      +{exp.skills.length - 3}
-                    </span>
-                  )}
+                    <div className="flex flex-col md:flex-row justify-between md:items-start mb-2 gap-2">
+                      <div>
+                        <h3 className="text-xl md:text-2xl font-bold text-gray-100 group-hover:text-accent-gold transition-colors">{exp.company}</h3>
+                        <p className="text-sm md:text-base text-gray-300 font-light mt-1">{exp.role}</p>
+                      </div>
+                      <span className="text-xs text-accent-gold font-mono bg-black/60 px-3 py-1.5 rounded border border-accent-gold/30 whitespace-nowrap">
+                        {exp.period}
+                      </span>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 mt-6">
+                      {exp.skills.map(skill => (
+                        <span key={skill} className="text-xs font-semibold bg-black/60 px-2.5 py-1 rounded border border-gray-700 text-gray-300 shadow-sm">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* FLOOR: Competencies Foundation */}
+          <section className="w-full mt-auto border-t-2 border-accent-gold/40 pt-10 pb-8 relative">
+            {/* Ambient glow from the floor */}
+            <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-accent-gold/5 to-transparent pointer-events-none"></div>
+
+            <h2 className="text-2xl font-bold text-gray-400 mb-10 uppercase tracking-widest text-center">
+              Foundation & Competencies
+            </h2>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              {Object.entries(resumeData.proficiencies).map(([category, skills]) => (
+                <div key={category} className="bg-black/50 backdrop-blur-sm border-b-4 border-accent-gold/60 p-5 rounded-t-xl hover:bg-black/70 transition-colors shadow-lg">
+                  <h3 className="text-xs font-bold text-accent-gold uppercase tracking-widest mb-4 opacity-90">{category}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {skills.map(skill => (
+                      <span key={skill} className="text-xs bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded border border-gray-800">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </section>
+
         </main>
 
         {/* BOTTOM: Contact Bar */}

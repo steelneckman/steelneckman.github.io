@@ -8,190 +8,238 @@
     "github": "github.com/steelneckman",
     "portfolio": "steelneckman.github.io"
   },
-  "summary": "Senior IT Architect and Cloud Platform Lead with 10+ years of experience. Specialized in cloud-native (Kubernetes, Azure), event-driven architecture (Kafka), observability (Grafana/Prometheus/Loki), DevOps, AI-integration, and full-stack development (C#/Java/Python etc.).",
+  "summary": "Experienced IT Architect and integration & cloud platform leader with over ten years of designing and delivering scalable, cloud‑native systems, including Kubernetes‑based platforms, event‑driven architectures, and SaaS‑style solutions. Proven track record in building and operating integration platforms, distributed systems, and AI‑adjacent workflows, with a strong focus on reliability, observability, DevOps, and full‑stack backend development. Combines hands‑on technical expertise with platform leadership, enabling close collaboration with product, engineering, and AI‑related initiatives to drive modern, cloud‑native architectures.",
   "expertise": [
-    "Cloud-Native/SaaS",
+    "Cloud-Native & SaaS",
     "System Integration",
-    "Scalability/Reliability",
+    "Solution Design",
+    "Scalability & Reliability",
     "Distributed Systems",
-    "API Platforms",
-    "Modernization",
-    "Kubernetes/Containers",
-    "Agile",
-    "DevOps/CI/CD",
-    "Security",
-    "Leadership",
-    "Event-Driven",
+    "API-Driven Platforms",
+    "Platform Modernization",
+    "Agile & Product Focus",
+    "Kubernetes & Containers",
+    "DevOps & CI/CD",
+    "Security-First Design",
+    "Technical Leadership",
+    "Event-Driven Systems",
     "Observability",
-    "AI/Agents",
-    "Full-Stack"
+    "AI & Agents Integration",
+    "Full-Stack Development"
   ],
   "highlights": [
-    "Platform with 200+ integrations",
-    "Java solution saving thousands SEK/day",
-    "Led teams of 20+ people"
+    "Cloud & Scale: Delivered a scalable platform supporting 200+ critical integrations in a multi-million SEK initiative.",
+    "Product development: Built a digital solution with Java for a Swedish agency, saving thousands of SEK per day.",
+    "Leadership & Delivery: Regularly led cross-functional teams of 20+ staff across technical and operational domains."
   ],
   "experience": [
     {
-      "id": "orthanc",
-      "company": "Tech Stack & Observability Hub",
-      "role": "Command Center",
-      "period": "Always Active",
-      "description": "The central tower of control. Mastering the art of platform engineering, tracing logs through the darkness, and orchestrating massive distributed systems.",
-      "metrics": [
-        "Full-Stack Vision",
-        "Distributed Tracing"
-      ],
-      "skills": [
-        "OTEL",
-        "Prometheus",
-        "Grafana",
-        "Loki",
-        "Terraform",
-        "GitOps"
-      ],
-      "theme": "orthanc"
-    },
-    {
-      "id": "gondor",
+      "id": "saab",
       "company": "SAAB",
       "role": "Platform Specialist",
-      "period": "Feb 2026 - Present",
-      "description": "Azure data hub, observability (App Insights/Grafana/CheckMK), MySQL, APIs.",
+      "period": "February 2026 – Present",
+      "location": "Linköping, Sweden",
+      "description": "Joined Saab as a Platform Specialist to design and implement a full-scale Azure cloud platform with observability.",
       "metrics": [
-        "99.99% uptime target",
-        "API scaling"
+        "Distributed Systems: Building a centralized Azure data hub that exposes core services and APIs for master data distribution across Saab systems.",
+        "Observability: Implementing an observability stack with Azure Application Insights and Grafana-stack to monitor services, APIs, and infrastructure across the platform.",
+        "Scalability & Reliability: Developing a central MySQL database for the platform hub, supporting high-volume data ingestion via migration scripts and API-driven, scalable, and reliable 24/7 access."
       ],
       "skills": [
         "Azure",
         "Grafana",
         "MySQL",
-        "APIs"
-      ],
-      "theme": "gondor"
+        "APIs",
+        "Containerization",
+        "Kubernetes"
+      ]
     },
     {
-      "id": "mordor",
+      "id": "lkab",
       "company": "LKAB",
       "role": "Solution Architect",
-      "period": "Jan 2024 - Feb 2026",
-      "description": "Cloud-native/K8s, Kafka events, BizTalk to Azure migration (200+ integrations), AI agents, API Management.",
+      "period": "January 2024 – February 2026",
+      "location": "Kiruna, Sweden",
+      "description": "Joined the world’s largest underground iron-ore mine to improve IT operations and develop new secure solutions.",
       "metrics": [
-        "200+ Integrations migrated",
-        "Event-driven scale"
+        "Cloud-Native & SaaS: Designing cloud-native solutions and integrations at LKAB using containerization and Kubernetes with SaaS-style deployment and operations.",
+        "Event-Driven Systems: Designing event-driven systems at LKAB using RabbitMQ to build real-time, asynchronous data pipelines that decouple services, support scalable integration, and enable future AI-driven workflows.",
+        "System Integration: Led the migration of over 100 BizTalk integrations to Azure Integration Services, modernizing legacy integrations into a scalable, cloud-native platform.",
+        "AI & Agents Integration: Integrated AI-driven prompts and AI agents into LKAB’s integration workflows, enhancing development speed and code quality while building and scaling the AIS integration platform.",
+        "API-Driven Platforms: Managed Azure API Management to centralize API-driven platforms and standardize secure access across hundreds of services."
       ],
       "skills": [
-        "K8s",
-        "Kafka",
-        "Azure",
+        "Rancher",
+        "RabbitMQ",
+        "Azure Integration Services",
         "AI Agents",
-        "API Mgmt"
-      ],
-      "theme": "mordor"
+        "API Management"
+      ]
     },
     {
-      "id": "rohan",
-      "company": "Försäkringskassan / CGI",
-      "role": "Full Stack Developer",
-      "period": "Oct 2022 - Jan 2024",
-      "description": "K8s/OpenShift, Quarkus migration, security UX, DevOps pipelines.",
+      "id": "fk",
+      "company": "Försäkringskassan",
+      "role": "DevOps & Platform Engineer",
+      "period": "October 2022 – January 2024",
+      "location": "Kiruna, Sweden",
+      "description": "Engaged by CGI to design and improve IT applications for Swedish government agencies, enhancing performance, security, and long-term maintainability.",
       "metrics": [
-        "20% faster startup"
+        "Kubernetes & Containers: Led Kubernetes adoption on OpenShift, guiding the team in building and deploying cloud-native containerized microservices with end-to-end CI/CD for fast delivery of microservices.",
+        "Platform Modernization: Modernized legacy Java services by migrating them to OpenShift with Quarkus, improving startup time, scalability, and resource efficiency for mission-critical systems.",
+        "Security-First Design: Designed UX and frontend interactions with strict access controls and guardrails, ensuring that caseworkers cannot perform unauthorized actions or access data beyond their permissions.",
+        "DevOps & CI/CD: Implemented a full DevOps pipeline where every service—from new to migrated—was built, tested, and deployed via CI/CD, with automated vulnerability checks, test verification, and secure handling of secrets and configuration."
       ],
       "skills": [
         "OpenShift",
         "Quarkus",
         "Security",
-        "DevOps"
-      ],
-      "theme": "rohan"
+        "DevOps",
+        "Java"
+      ]
     },
     {
-      "id": "rivendell",
+      "id": "noasark",
       "company": "Noas Ark",
-      "role": "Chairman",
-      "period": "2021 - 2022",
-      "description": "Communication, project planning, problem-solving. Led a team of 20+ people.",
+      "role": "Chairman & Treasurer",
+      "period": "March 2021 – October 2022",
+      "location": "Kiruna, Sweden",
+      "description": "During my parental leave and freelance work, I decided to volunteer at the preschool my children attend.",
       "metrics": [
-        "Led 20+ team"
+        "Communication Skills: Facilitated open communication among staff members to resolve long-standing conflicts in a school environment, fostering collaboration, trust, and a more supportive workplace culture.",
+        "Project Planning: Planned, executed, and completed a streamlined school closure process—balancing operational needs with stakeholder communication to ensure a smooth transition.",
+        "Problem Solving: Handled high-value severance packages and successfully supported several employees in securing new roles during a challenging transition."
       ],
       "skills": [
         "Leadership",
         "Communication",
-        "Planning"
-      ],
-      "theme": "rivendell"
+        "Planning",
+        "Problem Solving"
+      ]
     },
     {
-      "id": "shire",
+      "id": "liu",
       "company": "Linköping University (LiU)",
       "role": "Full Stack Developer",
-      "period": "2016 - 2021",
-      "description": "PVD-simulations (Python/MongoDB), Agile, tech leadership (C++/Python).",
+      "period": "March 2016 – February 2021",
+      "location": "Linköping, Sweden",
+      "description": "Developed full-stack software solutions at Linköping University to support physical vapor deposition (PVD) experiments and molecular dynamics simulations.",
       "metrics": [
-        "Simulate Molecule"
+        "Solution Design: Led the solution design for a system that performed advanced simulations of metals under extreme heat, using Python, MongoDB, and custom frontend components.",
+        "Agile & Product Focus: Implemented and evolved Agile practices to improve delivery pace, ownership, and software quality through short iterations, retrospectives, and close collaboration.",
+        "Technical Leadership: Provided technical leadership by guiding team members in the setup and development of C++, Python, and many other languages across multiple projects such as PVD experiments.",
+        "Full-Stack Development: Developed frontend and backend services to operate, calculate, and manage molecular dynamics simulations, storing and querying data in NoSQL databases."
       ],
       "skills": [
         "Python",
         "MongoDB",
         "Agile",
-        "C++"
-      ],
-      "theme": "shire"
+        "C++",
+        "Full stack"
+      ]
     }
   ],
   "education": [
-    "BSc Linköping University",
-    "Ongoing MSc Engineering Physics/EE"
+    "Bachelor’s Degree, Linköping University | Linköping, Sweden",
+    "M.Sc. in Engineering Physics and Electrical Engineering (incomplete), Linköping University"
   ],
-  "tech_stack": {
-    "languages": [
+  "proficiencies": {
+    "Programming": [
       "C",
       "C#",
+      "C++",
       "Java",
       "Kotlin",
       "Go",
-      "Python"
+      "Python",
+      "R",
+      "Lisp",
+      "COBOL",
+      "REST API",
+      "REGO (OPA)"
     ],
-    "databases": [
+    "Database": [
       "PostgreSQL",
       "MySQL",
-      "MongoDB"
+      "MongoDB",
+      "InfluxDB"
     ],
-    "web": [
-      "JS",
-      "TS",
+    "Web Development": [
+      "CSS",
+      "JavaScript",
+      "Typescript",
       "Angular",
       "React",
       "Vue",
       ".NET",
-      "Node",
+      "Node.js",
       "Quarkus"
     ],
-    "cloud": [
+    "Cloud & CI/CD": [
       "Azure",
-      "K8s",
+      "Kubernetes",
       "OpenShift",
+      "Rancher",
+      "Tekton",
+      "Jenkins",
+      "ArgoCD",
       "Podman"
     ],
-    "messaging": [
+    "Messaging Systems": [
       "Kafka",
-      "RabbitMQ"
+      "RabbitMQ",
+      "ActiveMQ",
+      "IBM MQ",
+      "Mosquitto",
+      "BizTalk"
     ],
-    "monitoring": [
-      "OTel",
+    "Monitoring & Logs": [
+      "OpenTelemetry",
       "Prometheus",
       "Grafana",
-      "Loki"
+      "Loki",
+      "Mimir",
+      "Graylog",
+      "Telegraf",
+      "Nodinite"
     ],
-    "tools": [
+    "Network & Security": [
+      "Firewalls",
+      "DMZ",
+      "Policies",
+      "VNet",
+      "VPC",
+      "SDN",
+      "Zero-Trust",
+      "TCP/IP protocol"
+    ],
+    "ITSM": [
+      "Fixit",
+      "ServiceDesk",
+      "ITIL",
+      "CMDB",
+      "SLA",
+      "RCA",
+      "Change Management"
+    ],
+    "Tools & IDEs": [
       "Git",
+      "Bitbucket",
       "JIRA",
-      "VSCode",
-      "Terraform"
+      "IntelliJ",
+      "VS Code",
+      "RStudio",
+      "Terraform",
+      "Office365"
     ],
-    "certs": [
-      "GCP/Golang ongoing"
+    "Other": [
+      "Linux",
+      "Windows",
+      "macOS",
+      "Swedish (Native)",
+      "English (Fluent)"
+    ],
+    "Certification in progress": [
+      "GCP and Golang"
     ]
   }
 }
