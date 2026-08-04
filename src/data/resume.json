@@ -34,10 +34,31 @@
   ],
   "experience": [
     {
+      "id": "brp-systems",
+      "company": "BRP Systems AB",
+      "role": "Senior IT Architect",
+      "period": "August 2026 - Present",
+      "location": "Linköping, Sweden",
+      "description": "Joined BRP Systems AB as Senior IT Architect, leading cloud architecture, platform engineering, and observability strategies on Google Cloud Platform.",
+      "metrics": [
+        "Cloud Architecture: Designing scalable, high-availability cloud architecture and solutions on Google Cloud Platform (GCP).",
+        "Platform Engineering: Driving platform engineering practices, infrastructure standards, and automated deployment models.",
+        "Kubernetes & Containers: Orchestrating containerized workloads and modern cloud-native architectures with Kubernetes.",
+        "Observability: Implementing end-to-end observability and telemetry stacks for distributed cloud platforms."
+      ],
+      "skills": [
+        "Cloud Architecture",
+        "Platform Engineering",
+        "Kubernetes",
+        "Observability",
+        "Google Cloud Platform"
+      ]
+    },
+    {
       "id": "saab",
       "company": "SAAB",
       "role": "Platform Specialist",
-      "period": "February 2026 – Present",
+      "period": "February 2026 - August 2026",
       "location": "Linköping, Sweden",
       "description": "Joined Saab as a Platform Specialist to design and implement a full-scale Azure cloud platform with observability.",
       "metrics": [
@@ -175,6 +196,7 @@
       "Quarkus"
     ],
     "Cloud & CI/CD": [
+      "GCP",
       "Azure",
       "Kubernetes",
       "OpenShift",

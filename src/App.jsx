@@ -56,8 +56,8 @@ export default function App() {
               <Climber />
               
               {resumeData.experience.map((exp, index) => {
-                // Calculate stair step: Saab (index 0) gets highest margin, LiU (last) gets 0 margin.
-                const stairStep = (resumeData.experience.length - 1 - index) * 8;
+                // Calculate stair step: BRP Systems (index 0) gets highest margin, LiU (last) gets 0 margin.
+                const stairStep = (resumeData.experience.length - 1 - index) * 7;
                 
                 return (
                   <div 
