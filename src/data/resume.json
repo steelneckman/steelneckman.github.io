@@ -8,29 +8,28 @@
     "github": "github.com/steelneckman",
     "portfolio": "steelneckman.github.io"
   },
-  "summary": "Experienced IT Architect and integration & cloud platform leader with over ten years of designing and delivering scalable, cloud‑native systems, including Kubernetes‑based platforms, event‑driven architectures, and SaaS‑style solutions. Proven track record in building and operating integration platforms, distributed systems, and AI‑adjacent workflows, with a strong focus on reliability, observability, DevOps, and full‑stack backend development. Combines hands‑on technical expertise with platform leadership, enabling close collaboration with product, engineering, and AI‑related initiatives to drive modern, cloud‑native architectures.",
+  "summary": "I build cloud-native platforms from the ground up, combining hands-on engineering, distributed systems architecture, and practical AI-assisted developer workflows.",
   "expertise": [
-    "Cloud-Native & SaaS",
-    "System Integration",
-    "Solution Design",
-    "Scalability & Reliability",
+    "Platform Engineering",
+    "AI Developer Workflows",
     "Distributed Systems",
-    "API-Driven Platforms",
-    "Platform Modernization",
-    "Agile & Product Focus",
-    "Kubernetes & Containers",
-    "DevOps & CI/CD",
-    "Security-First Design",
-    "Technical Leadership",
-    "Event-Driven Systems",
-    "Observability",
-    "AI & Agents Integration",
-    "Full-Stack Development"
+    "Reliability & Security",
+    "Backend Engineering",
+    "Data & Migration"
   ],
   "highlights": [
-    "Cloud & Scale: Delivered a scalable platform supporting 200+ critical integrations in a multi-million SEK initiative.",
-    "Product development: Built a digital solution with Java for a Swedish agency, saving thousands of SEK per day.",
-    "Leadership & Delivery: Regularly led cross-functional teams of 20+ staff across technical and operational domains."
+    {
+      "value": "1 month",
+      "label": "To build a platform foundation"
+    },
+    {
+      "value": "3M+",
+      "label": "Users the BRP system can handle"
+    },
+    {
+      "value": "200+",
+      "label": "Integrations in LKAB modernization scope"
+    }
   ],
   "experience": [
     {
@@ -39,19 +38,23 @@
       "role": "Senior IT Architect",
       "period": "August 2026 - Present",
       "location": "Linköping, Sweden",
-      "description": "Joined BRP Systems AB as Senior IT Architect, leading cloud architecture, platform engineering, and observability strategies on Google Cloud Platform.",
+      "description": "Independently designed and implemented the foundation for an internal developer platform within my first month at BRP Systems, establishing the architecture for SaaS operations and AI-assisted development. The system can handle over 3 million users, meeting a business requirement.",
       "metrics": [
-        "Cloud Architecture: Designing scalable, high-availability cloud architecture and solutions on Google Cloud Platform (GCP).",
-        "Platform Engineering: Driving platform engineering practices, infrastructure standards, and automated deployment models.",
-        "Kubernetes & Containers: Orchestrating containerized workloads and modern cloud-native architectures with Kubernetes.",
-        "Observability: Implementing end-to-end observability and telemetry stacks for distributed cloud platforms."
+        "Platform Foundation: Independently designed and implemented an internal developer platform foundation within my first month, covering SaaS operations and deployment practices on Google Cloud Platform.",
+        "Scale & Migration: Built a system capable of handling over 3 million users, meeting a business requirement and supporting the architecture for large-scale migration.",
+        "Reliability & Security: Designed for high availability, workload separation, zero trust, and observability.",
+        "AI Developer Workflows: Responsible for direction, tools, and workflows for AI-assisted product development.",
+        "Reliable Data Flows: Applied Bento, change data capture (CDC), outbox/inbox patterns, idempotency, retries, and replay to distributed data flows."
       ],
       "skills": [
-        "Cloud Architecture",
         "Platform Engineering",
+        "GCP",
         "Kubernetes",
+        "AI Developer Workflows",
+        "Bento",
+        "CDC",
         "Observability",
-        "Google Cloud Platform"
+        "Zero Trust"
       ]
     },
     {
@@ -85,7 +88,7 @@
       "metrics": [
         "Cloud-Native & SaaS: Designing cloud-native solutions and integrations at LKAB using containerization and Kubernetes with SaaS-style deployment and operations.",
         "Event-Driven Systems: Designing event-driven systems at LKAB using RabbitMQ to build real-time, asynchronous data pipelines that decouple services, support scalable integration, and enable future AI-driven workflows.",
-        "System Integration: Led the migration of over 100 BizTalk integrations to Azure Integration Services, modernizing legacy integrations into a scalable, cloud-native platform.",
+        "System Integration: Led modernization across a scope of 200+ BizTalk and custom integrations, using Azure Integration Services to establish a scalable, cloud-native integration platform.",
         "AI & Agents Integration: Integrated AI-driven prompts and AI agents into LKAB’s integration workflows, enhancing development speed and code quality while building and scaling the AIS integration platform.",
         "API-Driven Platforms: Managed Azure API Management to centralize API-driven platforms and standardize secure access across hundreds of services."
       ],
@@ -164,14 +167,99 @@
     "M.Sc. in Engineering Physics and Electrical Engineering (incomplete), Linköping University"
   ],
   "proficiencies": {
-    "Programming": [
-      "C",
-      "C#",
-      "C++",
-      "Java",
-      "Kotlin",
+    "Platform Engineering": [
+      "Kubernetes",
+      "OpenShift",
+      "GCP",
+      "Azure",
+      "Terraform",
+      "Bicep",
+      "ArgoCD"
+    ],
+    "AI Developer Workflows": [
+      "AI-assisted Development",
+      "AI Agents",
+      "Agentic Workflows"
+    ],
+    "Distributed Systems": [
+      "Kafka",
+      "NATS JetStream",
+      "CDC / Debezium",
+      "Bento",
+      "RabbitMQ"
+    ],
+    "Reliability & Security": [
+      "OpenTelemetry",
+      "Prometheus",
+      "Grafana",
+      "Loki",
+      "Zero Trust",
+      "OIDC / OAuth2",
+      "RBAC"
+    ],
+    "Backend Engineering": [
+      "C# / .NET",
+      "Java / Quarkus",
       "Go",
       "Python",
+      "TypeScript"
+    ],
+    "Data & Migration": [
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Outbox / Inbox",
+      "Idempotency",
+      "Retries",
+      "Replay"
+    ]
+  },
+  "profile": {
+    "headline": "Platform Engineering · AI Developer Platforms · Distributed Systems"
+  },
+  "caseStudies": [
+    {
+      "experienceId": "brp-systems",
+      "title": "SaaS Platform Foundation",
+      "result": "Implemented an internal developer platform foundation within my first month. The system can handle over 3 million users, meeting a business requirement.",
+      "challenge": "Establish a platform for SaaS operations and a large-scale system migration.",
+      "contribution": "Independently designed and built the platform foundation, and took responsibility for AI-assisted development tools and workflows.",
+      "technicalDetails": [
+        "Google Cloud Platform and Kubernetes for cloud-native infrastructure and deployment.",
+        "Architecture covering high availability, workload separation, zero trust, and observability.",
+        "Bento and CDC with outbox/inbox patterns, idempotency, retries, and replay for reliable data flows."
+      ]
+    },
+    {
+      "experienceId": "lkab",
+      "title": "Integration Modernization",
+      "result": "Led integration modernization across a scope of 200+ BizTalk and custom integrations, establishing a cloud-native, event-driven architecture.",
+      "challenge": "Modernize legacy integrations and provide secure, consistent access to services.",
+      "contribution": "Designed the integration architecture, led migration work, and introduced AI-assisted development workflows.",
+      "technicalDetails": [
+        "Azure Integration Services for platform modernization and Azure API Management for secure, standardized API access.",
+        "RabbitMQ for asynchronous data pipelines and decoupled services.",
+        "Containerization and Kubernetes for cloud-native deployment and operations."
+      ]
+    },
+    {
+      "experienceId": "fk",
+      "title": "Cloud-Native Delivery",
+      "result": "Java/Quarkus modernization, OpenShift adoption, and CI/CD contributed to doubling the delivery rate.",
+      "challenge": "Improve delivery and maintainability of applications for a Swedish government agency.",
+      "contribution": "Modernized Java services and implemented automated build, test, and deployment pipelines for cloud-native delivery.",
+      "technicalDetails": [
+        "Java and Quarkus services deployed as containerized microservices on OpenShift.",
+        "CI/CD with vulnerability checks, automated tests, and secure secrets and configuration handling.",
+        "Access controls in frontend workflows to keep caseworker actions within their permissions."
+      ]
+    }
+  ],
+  "additionalProficiencies": {
+    "Programming": [
+      "C",
+      "C++",
+      "Kotlin",
       "R",
       "Lisp",
       "COBOL",
@@ -179,46 +267,29 @@
       "REGO (OPA)"
     ],
     "Database": [
-      "PostgreSQL",
-      "MySQL",
-      "MongoDB",
       "InfluxDB"
     ],
     "Web Development": [
       "CSS",
       "JavaScript",
-      "Typescript",
       "Angular",
       "React",
       "Vue",
-      ".NET",
-      "Node.js",
-      "Quarkus"
+      "Node.js"
     ],
     "Cloud & CI/CD": [
-      "GCP",
-      "Azure",
-      "Kubernetes",
-      "OpenShift",
       "Rancher",
       "Tekton",
       "Jenkins",
-      "ArgoCD",
       "Podman"
     ],
     "Messaging Systems": [
-      "Kafka",
-      "RabbitMQ",
       "ActiveMQ",
       "IBM MQ",
       "Mosquitto",
       "BizTalk"
     ],
     "Monitoring & Logs": [
-      "OpenTelemetry",
-      "Prometheus",
-      "Grafana",
-      "Loki",
       "Mimir",
       "Graylog",
       "Telegraf",
@@ -231,7 +302,6 @@
       "VNet",
       "VPC",
       "SDN",
-      "Zero-Trust",
       "TCP/IP protocol"
     ],
     "ITSM": [
@@ -250,7 +320,6 @@
       "IntelliJ",
       "VS Code",
       "RStudio",
-      "Terraform",
       "Office365"
     ],
     "Other": [

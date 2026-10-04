@@ -30,24 +30,75 @@ export default function App() {
         className={`flex flex-col w-full h-full transition-opacity duration-1000 ease-in-out ${isIntroComplete ? 'opacity-100' : 'opacity-0 pointer-events-none'
           }`}
       >
-        {/* TOP: Hero Section (15%) */}
-        <header className="h-[15vh] flex flex-col items-center justify-end pb-4 shrink-0 px-4 text-center z-10">
-          <h1 className="text-3xl md:text-5xl font-bold text-accent-gold tracking-wider uppercase text-glow">
-            {resumeData.personal.name}
-          </h1>
-          <h2 className="text-sm md:text-base text-gray-300 font-light mt-1">
-            Senior IT Architect | Cloud Platform Lead
-          </h2>
-          <p className="text-xs md:text-sm text-gray-400 mt-2">
-            200+ integrations | 20+ team led | 10+ years
-          </p>
-        </header>
+        <main className="flex-1 min-h-0 w-full max-w-7xl mx-auto p-4 md:p-8 overflow-y-auto overflow-x-hidden z-10 flex flex-col">
+          <header className="flex flex-col items-center justify-center pt-2 pb-6 md:pt-0 md:pb-8 shrink-0 text-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-accent-gold tracking-wider uppercase text-glow">
+              {resumeData.personal.name}
+            </h1>
+            <p className="text-sm md:text-base text-gray-300 font-light mt-3 max-w-3xl">
+              {resumeData.profile.headline}
+            </p>
+            <p className="text-sm text-gray-400 mt-3 max-w-3xl leading-relaxed">
+              {resumeData.summary}
+            </p>
+          </header>
 
-        {/* MIDDLE: Main Content */}
-        <main className="flex-1 w-full max-w-7xl mx-auto p-4 md:p-8 overflow-y-auto overflow-x-hidden z-10 flex flex-col">
-          
+          <ul aria-label="Selected achievements" className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 shrink-0">
+            {resumeData.highlights.map(highlight => (
+              <li key={highlight.label} className="border-l-2 border-accent-gold/50 bg-black/40 backdrop-blur-sm px-5 py-4 rounded-r-lg">
+                <span className="block text-2xl font-bold text-accent-gold">{highlight.value}</span>
+                <span className="block text-sm text-gray-300 mt-1">{highlight.label}</span>
+              </li>
+            ))}
+          </ul>
+
+          <section aria-labelledby="selected-work-heading" className="w-full mb-16 shrink-0">
+            <h2 id="selected-work-heading" className="text-2xl font-bold text-accent-gold mb-3 uppercase tracking-wider text-center text-glow">
+              Selected Work
+            </h2>
+            <p className="text-sm text-gray-400 text-center mb-8">
+              Platform foundations, integration modernization, and cloud-native delivery.
+            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-start">
+              {resumeData.caseStudies.map(caseStudy => {
+                const experience = resumeData.experience.find(exp => exp.id === caseStudy.experienceId);
+
+                return (
+                  <article key={caseStudy.experienceId} className="bg-[#1e1e1e]/80 backdrop-blur-md border border-accent-gold/20 rounded-xl p-6 shadow-lg">
+                    <p className="text-xs font-semibold text-accent-gold uppercase tracking-wider mb-2">{experience.company}</p>
+                    <h3 className="text-xl font-bold text-gray-100 mb-5">{caseStudy.title}</h3>
+                    <dl className="space-y-5 text-sm leading-relaxed">
+                      <div className="border-l-2 border-accent-gold pl-4">
+                        <dt className="font-semibold text-accent-gold mb-1">Result</dt>
+                        <dd className="text-gray-100">{caseStudy.result}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-gray-300 mb-1">Challenge</dt>
+                        <dd className="text-gray-400">{caseStudy.challenge}</dd>
+                      </div>
+                      <div>
+                        <dt className="font-semibold text-gray-300 mb-1">My contribution</dt>
+                        <dd className="text-gray-400">{caseStudy.contribution}</dd>
+                      </div>
+                    </dl>
+                    <details className="mt-6 border-t border-accent-gold/20 pt-4">
+                      <summary className="text-sm text-accent-gold cursor-pointer rounded focus-visible:outline-2 focus-visible:outline-accent-gold focus-visible:outline-offset-4">
+                        Technical details
+                      </summary>
+                      <ul className="mt-4 pl-4 list-disc space-y-3 text-sm text-gray-300 leading-relaxed marker:text-accent-gold">
+                        {caseStudy.technicalDetails.map(detail => (
+                          <li key={detail}>{detail}</li>
+                        ))}
+                      </ul>
+                    </details>
+                  </article>
+                );
+              })}
+            </div>
+          </section>
+
           {/* STAIRCASE: Career Highlights */}
-          <section className="w-full relative pt-2 pb-8 mb-16 flex flex-col items-center">
+          <section aria-labelledby="career-timeline-heading" className="w-full relative pt-2 pb-8 mb-16 flex flex-col items-center shrink-0">
             <h2 id="career-timeline-heading" className="text-2xl font-bold text-accent-gold mb-8 uppercase tracking-wider text-center text-glow w-fit mx-auto">
               Career Timeline
             </h2>
@@ -95,20 +146,20 @@ export default function App() {
           </section>
 
           {/* FLOOR: Competencies Foundation */}
-          <section className="w-full mt-auto border-t-2 border-accent-gold/40 pt-10 pb-8 relative">
+          <section aria-labelledby="competencies-heading" className="w-full mt-auto border-t-2 border-accent-gold/40 pt-10 pb-8 relative shrink-0">
             {/* Ambient glow from the floor */}
             <div className="absolute top-0 left-0 w-full h-16 bg-gradient-to-b from-accent-gold/5 to-transparent pointer-events-none"></div>
 
-            <h2 className="text-2xl font-bold text-gray-400 mb-10 uppercase tracking-widest text-center">
+            <h2 id="competencies-heading" className="text-2xl font-bold text-gray-400 mb-10 uppercase tracking-widest text-center">
               Foundation & Competencies
             </h2>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              {Object.entries(resumeData.proficiencies).map(([category, skills]) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {resumeData.expertise.map(category => (
                 <div key={category} className="bg-black/50 backdrop-blur-sm border-b-4 border-accent-gold/60 p-5 rounded-t-xl hover:bg-black/70 transition-colors shadow-lg">
                   <h3 className="text-xs font-bold text-accent-gold uppercase tracking-widest mb-4 opacity-90">{category}</h3>
                   <div className="flex flex-wrap gap-2">
-                    {skills.map(skill => (
+                    {resumeData.proficiencies[category].map(skill => (
                       <span key={skill} className="text-xs bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded border border-gray-800">
                         {skill}
                       </span>
@@ -117,6 +168,26 @@ export default function App() {
                 </div>
               ))}
             </div>
+
+            <details className="mt-8 bg-black/40 backdrop-blur-sm border border-accent-gold/20 rounded-xl p-5">
+              <summary className="text-sm font-semibold text-accent-gold cursor-pointer rounded focus-visible:outline-2 focus-visible:outline-accent-gold focus-visible:outline-offset-4">
+                Additional tools &amp; background
+              </summary>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+                {Object.entries(resumeData.additionalProficiencies).map(([category, skills]) => (
+                  <div key={category}>
+                    <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">{category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skills.map(skill => (
+                        <span key={skill} className="text-xs bg-[#1a1a1a] text-gray-300 px-2 py-1 rounded border border-gray-800">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </details>
           </section>
 
         </main>
