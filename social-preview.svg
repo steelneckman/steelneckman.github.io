@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#121212" />
+  <g stroke="#d4a017" stroke-width="1" opacity=".2">
+    <path d="M890 60 1140 140 950 280 1090 490 870 560 950 280 890 60 790 180 950 280 1140 140 1090 490" fill="none" />
+    <path d="M1140 140 1180 350 1090 490 1170 580 870 560 790 180" fill="none" />
+  </g>
+  <g fill="#d4a017" opacity=".6">
+    <circle cx="890" cy="60" r="4" /><circle cx="1140" cy="140" r="4" />
+    <circle cx="950" cy="280" r="5" /><circle cx="1090" cy="490" r="4" />
+    <circle cx="870" cy="560" r="4" /><circle cx="790" cy="180" r="4" />
+    <circle cx="1180" cy="350" r="4" /><circle cx="1170" cy="580" r="4" />
+  </g>
+  <rect x="72" y="116" width="72" height="4" fill="#d4a017" />
+  <g font-family="Arial, sans-serif">
+    <text x="72" y="86" fill="#d4a017" font-size="20" font-weight="700" letter-spacing="4">STEELNECK</text>
+    <text x="72" y="220" fill="#d4a017" font-size="64" font-weight="700">JOEL STÅLNACKE</text>
+    <g fill="#e5e7eb" font-size="32">
+      <text x="72" y="296">Platform Engineering</text>
+      <text x="72" y="346">AI Developer Platforms</text>
+      <text x="72" y="396">Distributed Systems</text>
+    </g>
+    <text x="72" y="484" fill="#9ca3af" font-size="24">Cloud-native platforms. Hands-on engineering.</text>
+    <text x="72" y="566" fill="#9ca3af" font-size="20">steelneckman.github.io</text>
+  </g>
+</svg>
