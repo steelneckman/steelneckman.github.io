@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { ParticleEngine } from '../utils/ParticleEngine';
 
-export function useParticleIntro() {
+export function useParticleBackground() {
   const canvasRef = useRef(null);
 
   useEffect(() => {

@@ -1,7 +1,7 @@
-import { useParticleIntro } from '../hooks/useParticleIntro';
+import { useParticleBackground } from '../hooks/useParticleBackground';
 
 export default function ParticleBackground() {
-  const canvasRef = useParticleIntro();
+  const canvasRef = useParticleBackground();
 
   return (
     <canvas 

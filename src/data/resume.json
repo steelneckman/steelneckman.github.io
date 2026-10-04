@@ -63,19 +63,15 @@
       "role": "Platform Specialist",
       "period": "February 2026 - August 2026",
       "location": "Linköping, Sweden",
-      "description": "Joined Saab as a Platform Specialist to design and implement a full-scale Azure cloud platform with observability.",
+      "description": "Built an Azure platform for Saab’s SaaS solution and implemented monitoring across the platform, services, and infrastructure using Azure Application Insights and Grafana.",
       "metrics": [
-        "Distributed Systems: Building a centralized Azure data hub that exposes core services and APIs for master data distribution across Saab systems.",
-        "Observability: Implementing an observability stack with Azure Application Insights and Grafana-stack to monitor services, APIs, and infrastructure across the platform.",
-        "Scalability & Reliability: Developing a central MySQL database for the platform hub, supporting high-volume data ingestion via migration scripts and API-driven, scalable, and reliable 24/7 access."
+        "Built an Azure platform for Saab’s SaaS solution.",
+        "Implemented monitoring across the platform, services, and infrastructure using Azure Application Insights and Grafana."
       ],
       "skills": [
         "Azure",
-        "Grafana",
-        "MySQL",
-        "APIs",
-        "Containerization",
-        "Kubernetes"
+        "Azure Application Insights",
+        "Grafana"
       ]
     },
     {
