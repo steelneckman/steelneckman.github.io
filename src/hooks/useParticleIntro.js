@@ -1,30 +1,28 @@
 import { useEffect, useRef } from 'react';
 import { ParticleEngine } from '../utils/ParticleEngine';
 
-export function useParticleIntro(onIntroComplete) {
+export function useParticleIntro() {
   const canvasRef = useRef(null);
-  const engineRef = useRef(null);
 
   useEffect(() => {
     if (!canvasRef.current) return;
 
-    // Check for reduced motion
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const isReducedMotion = mediaQuery.matches;
-
-    // Initialize the engine
-    engineRef.current = new ParticleEngine(canvasRef.current, {
-      onIntroComplete,
-      isReducedMotion
-    });
+    const canvas = canvasRef.current;
+    let engine;
+    const initialize = () => {
+      engine?.destroy();
+      engine = new ParticleEngine(canvas, { isReducedMotion: mediaQuery.matches });
+    };
+    initialize();
+    mediaQuery.addEventListener('change', initialize);
 
     // Cleanup on unmount
     return () => {
-      if (engineRef.current) {
-        engineRef.current.destroy();
-      }
+      mediaQuery.removeEventListener('change', initialize);
+      engine.destroy();
     };
-  }, [onIntroComplete]);
+  }, []);
 
   return canvasRef;
 }

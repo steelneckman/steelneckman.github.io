@@ -1,13 +1,13 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import ParticleBackground from './components/ParticleBackground';
 import Climber from './components/Climber';
+import ExperienceDialog from './components/ExperienceDialog';
 import resumeData from './data/resume.json';
 
 export default function App() {
   const [activeCard, setActiveCard] = useState(null);
-  const [isIntroComplete, setIsIntroComplete] = useState(false);
-
-  const handleCardClick = (id) => {
+  const handleCardClick = (id, event) => {
+    event.currentTarget.focus({ preventScroll: true });
     setActiveCard(id);
   };
 
@@ -15,22 +15,17 @@ export default function App() {
     setActiveCard(null);
   };
 
-  const handleIntroComplete = useCallback(() => {
-    setIsIntroComplete(true);
-  }, []);
-
   const activeExperience = resumeData.experience.find(exp => exp.id === activeCard);
 
   return (
-    <div className="isolate w-full h-screen overflow-hidden text-gray-200 font-sans selection:bg-accent-gold selection:text-black flex flex-col">
-      <ParticleBackground onIntroComplete={handleIntroComplete} />
+    <div className="isolate w-full h-dvh overflow-hidden text-gray-200 font-sans selection:bg-accent-gold selection:text-black flex flex-col">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-black focus:text-accent-gold focus:px-4 focus:py-2 focus:rounded">
+        Skip to content
+      </a>
+      <ParticleBackground />
 
-      {/* Main UI Wrapper: Fades in after intro is complete */}
-      <div
-        className={`flex flex-col w-full h-full transition-opacity duration-1000 ease-in-out ${isIntroComplete ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
-      >
-        <main className="flex-1 min-h-0 w-full max-w-7xl mx-auto p-4 md:p-8 overflow-y-auto overflow-x-hidden z-10 flex flex-col">
+      <div className="flex flex-col w-full h-full">
+        <main id="main-content" tabIndex={-1} className="flex-1 min-h-0 w-full max-w-7xl mx-auto p-4 md:p-8 overflow-y-auto overflow-x-hidden z-10 flex flex-col">
           <header className="flex flex-col items-center justify-center pt-2 pb-6 md:pt-0 md:pb-8 shrink-0 text-center">
             <h1 className="text-3xl md:text-5xl font-bold text-accent-gold tracking-wider uppercase text-glow">
               {resumeData.personal.name}
@@ -111,10 +106,9 @@ export default function App() {
                 const stairStep = (resumeData.experience.length - 1 - index) * 7;
                 
                 return (
-                  <div 
+                  <article
                     key={exp.id}
                     style={{ '--stair-margin': `${stairStep}%` }}
-                    onClick={() => handleCardClick(exp.id)}
                     className="career-step bg-[#1e1e1e]/70 backdrop-blur-md border-l-4 border-b border-r border-t border-accent-gold/20 border-l-accent-gold rounded-r-xl p-6 cursor-pointer hover:bg-[#2a2a2a]/90 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(212,160,23,0.3)] transition-all shadow-lg w-full md:w-[65%] ml-0 md:ml-[var(--stair-margin)] relative group"
                   >
                     {/* Visual Connection Line (Optional, for the stairs effect) */}
@@ -125,9 +119,9 @@ export default function App() {
                     <div className="flex flex-col md:flex-row justify-between md:items-start mb-2 gap-2">
                       <div>
                         <h3 className="text-xl md:text-2xl font-bold text-gray-100 group-hover:text-accent-gold transition-colors">{exp.company}</h3>
-                        <p className="text-sm md:text-base text-gray-300 font-light mt-1">{exp.role}</p>
+                        <p id={`career-${exp.id}-role`} className="text-sm md:text-base text-gray-300 font-light mt-1">{exp.role}</p>
                       </div>
-                      <span className="text-xs text-accent-gold font-mono bg-black/60 px-3 py-1.5 rounded border border-accent-gold/30 whitespace-nowrap">
+                      <span id={`career-${exp.id}-period`} className="text-xs text-accent-gold font-mono bg-black/60 px-3 py-1.5 rounded border border-accent-gold/30 whitespace-nowrap">
                         {exp.period}
                       </span>
                     </div>
@@ -139,7 +133,15 @@ export default function App() {
                         </span>
                       ))}
                     </div>
-                  </div>
+                    <button
+                      type="button"
+                      aria-label={`View experience at ${exp.company}`}
+                      aria-describedby={`career-${exp.id}-role career-${exp.id}-period`}
+                      aria-haspopup="dialog"
+                      onClick={event => handleCardClick(exp.id, event)}
+                      className="absolute inset-0 w-full rounded-r-xl cursor-pointer focus-visible:outline-2 focus-visible:outline-accent-gold focus-visible:outline-offset-4"
+                    />
+                  </article>
                 );
               })}
             </div>
@@ -208,64 +210,8 @@ export default function App() {
         </footer>
       </div>
 
-      {/* MODAL / CARD EXPANSION */}
-      {activeCard && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity"
-          onClick={handleCloseModal}
-        >
-          <div
-            className="bg-[#1a1a1a] border border-accent-gold/40 rounded-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto shadow-[0_0_40px_rgba(212,160,23,0.15)] relative animate-in fade-in zoom-in-95 duration-200"
-            onClick={e => e.stopPropagation()}
-          >
-            <button
-              onClick={handleCloseModal}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center"
-            >
-              ✕
-            </button>
-
-            <div className="p-8">
-              <h2 className="text-3xl font-bold text-accent-gold mb-2">{activeExperience.company}</h2>
-              <p className="text-lg text-gray-300 mb-1">{activeExperience.role}</p>
-              <p className="text-sm text-gray-500 mb-6">{activeExperience.period}</p>
-
-              <div className="mb-8">
-                <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-2">Description</h4>
-                <p className="text-gray-200 leading-relaxed">
-                  {activeExperience.description}
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Key Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {activeExperience.skills.map(skill => (
-                      <span key={skill} className="text-xs bg-accent-gold/10 text-accent-gold px-3 py-1.5 rounded-full border border-accent-gold/20">
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {activeExperience.metrics && activeExperience.metrics.length > 0 && (
-                  <div>
-                    <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">Highlights</h4>
-                    <ul className="space-y-2">
-                      {activeExperience.metrics.map(metric => (
-                        <li key={metric} className="text-sm text-gray-300 flex items-start gap-2">
-                          <span className="text-accent-gold mt-1">✦</span>
-                          {metric}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+      {activeExperience && (
+        <ExperienceDialog experience={activeExperience} onClose={handleCloseModal} />
       )}
     </div>
   );

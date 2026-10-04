@@ -20,6 +20,20 @@
     color: var(--color-gray-200);
     font-family: var(--font-sans);
   }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent-gold);
+    outline-offset: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Custom Scrollbar for the inner grid container */

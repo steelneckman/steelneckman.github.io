@@ -102,7 +102,7 @@ class Particle {
   }
 
   draw(ctx, phase, elapsed, phaseDuration) {
-    let opacityMultiplier = 1;
+    let opacityMultiplier;
 
     // Calculate opacity based on cinematic phase
     if (phase === PHASE.REVEAL_POINTS) {
@@ -202,6 +202,8 @@ export class ParticleEngine {
         p.canvasHeight = this.height;
       });
     }
+
+    if (this.isReducedMotion && this.particles.length > 0) this.animate();
   }
 
   init() {
@@ -350,7 +352,7 @@ export class ParticleEngine {
     // Clear canvas with a solid background to prevent trails, or clearRect for pure overlay
     this.ctx.clearRect(0, 0, this.width, this.height);
 
-    this.particles.forEach(p => p.update(this.phase));
+    if (!this.isReducedMotion) this.particles.forEach(p => p.update(this.phase));
 
     this.drawLines();
 
@@ -358,7 +360,7 @@ export class ParticleEngine {
     this.particles.forEach(p => p.draw(this.ctx, this.phase, elapsed, this.phaseDuration));
     this.ctx.shadowBlur = 0; // Reset
 
-    this.animationFrameId = requestAnimationFrame(this.animate);
+    if (!this.isReducedMotion) this.animationFrameId = requestAnimationFrame(this.animate);
   }
 
   destroy() {
